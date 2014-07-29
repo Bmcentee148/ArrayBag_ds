@@ -18,7 +18,7 @@ public class BagTest {
 		obj_bag.add("Kyle"); // bag shouldnt have enough room to add kyle
 		System.out.println(obj_bag.getCurrentSize());
 		displayState(obj_bag);
-
+		String[] t_arr = obj_bag.toArray();
 		// obj_bag.remove();
 		// obj_bag.remove("Brian");
 		// //should now contain 4 names
