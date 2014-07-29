@@ -3,11 +3,11 @@
 public class BagTest {
 
 	public static void main(String [] args) {
-		ArrayBag<String> obj_bag = new Bag(6);
+		ArrayBag<String> obj_bag = new ArrayBag<String>(6);
 		System.out.println(obj_bag.getCurrentSize()); //prints 0
 		System.out.println(obj_bag.isEmpty()); //prints true
-		String r_obj = obj_bag.remove();
-		System.out.println(r_obj == null); //prints true
+		//String r_obj = obj_bag.remove();
+		//System.out.println(r_obj == null); //prints true
 
 		obj_bag.add("Brian");
 		obj_bag.add("Dad");
@@ -16,25 +16,25 @@ public class BagTest {
 		obj_bag.add("Otis");
 		obj_bag.add("Anthony");
 		obj_bag.add("Kyle"); // bag shouldnt have enough room to add kyle
-
-		displayState(obj_bag);
-
-		obj_bag.remove();
-		obj_bag.remove("Brian");
-		//should now contain 4 names
-		displayState(obj_bag);
-
-		obj_bag.add("Brian");
-		System.out.println(obj_bag.getFrequencyOf("Brian")); //2
-		System.out.println(obj_bag.getFrequencyOf("Casey")); //1
-		System.out.println(obj_bag.getFrequencyOf("Jamie")); //0
-
-		System.out.println(obj_bag.contains("Casey"));
-		System.out.println(obj_bag.contains("Jamie"));
-
-		obj_bag.clear();
-		System.out.println(obj_bag.isEmpty());
 		System.out.println(obj_bag.getCurrentSize());
+		displayState(obj_bag);
+
+		// obj_bag.remove();
+		// obj_bag.remove("Brian");
+		// //should now contain 4 names
+		// displayState(obj_bag);
+
+		// obj_bag.add("Brian");
+		// System.out.println(obj_bag.getFrequencyOf("Brian")); //2
+		// System.out.println(obj_bag.getFrequencyOf("Casey")); //1
+		// System.out.println(obj_bag.getFrequencyOf("Jamie")); //0
+
+		// System.out.println(obj_bag.contains("Casey"));
+		// System.out.println(obj_bag.contains("Jamie"));
+
+		// obj_bag.clear();
+		// System.out.println(obj_bag.isEmpty());
+		// System.out.println(obj_bag.getCurrentSize());
 
 
 	}
@@ -53,7 +53,7 @@ public class BagTest {
 		}
 	}
 
-	public static void displayState(Bag<String> obj_bag) {
+	public static void displayState(ArrayBag<String> obj_bag) {
 		Object[] obj_array = obj_bag.toArray();
 		String[] str_array = toStringArray(obj_array);
 		printArray(str_array);
