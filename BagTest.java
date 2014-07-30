@@ -18,12 +18,13 @@ public class BagTest {
 		obj_bag.add("Kyle"); // bag shouldnt have enough room to add kyle
 		System.out.println(obj_bag.getCurrentSize());
 		displayState(obj_bag);
-		String[] t_arr = obj_bag.toArray();
+		//String[] t_arr = obj_bag.toArray();
 		obj_bag.remove();
 		obj_bag.remove("Brian");
 		//should now contain 4 names
 		displayState(obj_bag);
 
+		obj_bag.add("Brian");
 		obj_bag.add("Brian");
 		System.out.println(obj_bag.getFrequencyOf("Brian")); //2
 		System.out.println(obj_bag.getFrequencyOf("Casey")); //1
@@ -51,6 +52,7 @@ public class BagTest {
 		for(int i = 0; i< arr.length; i++) {
 			System.out.print(arr[i] + " ");
 		}
+		System.out.println("");
 	}
 
 	public static void displayState(ArrayBag<String> obj_bag) {
